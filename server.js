@@ -11,7 +11,7 @@ mongoose.Promise = Promise;
 var Article = require('./models/Article.js');
 
 var app = express();
-var PORT = process.env.PORT || 3006;
+var PORT = process.env.PORT || 8000;
 
 // Run Morgan for Logging
 app.use(logger('dev'));
