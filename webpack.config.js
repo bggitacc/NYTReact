@@ -14,7 +14,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           // These are the specific transformations we'll be using. 
           presets: ['react', 'es2015']

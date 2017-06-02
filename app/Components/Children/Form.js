@@ -37,31 +37,32 @@ var Form = React.createClass({
 	// Here we render the function
 	render: function(){
 
-
+			var style = {background: "#000"}
+			var textStyle = {color: "#fff"}
 
 		return(
 
-			<div className="panel panel-default">
-				<div className="panel-heading">
-					<h2 className="panel-title text-center"><strong>Search</strong></h2>
+			<div className="panel panel-warning" >
+				<div className="panel-heading" style={style}>
+					<h2 className="panel-title text-center"><strong style={textStyle}>Search</strong></h2>
 				</div>
 				<div className="panel-body text-center">
 
 						<form>
 							<div className="form-group">
-								<h4 className=""><strong>Topic</strong></h4>
+								<h4 className=""><strong>Please Enter A Topic</strong></h4>
 								<input type="text" className="form-control text-center" id="topic" onChange= {this.handleChange} required/>
 								<br />
 
-								<h4 className=""><strong>Start Year</strong></h4>
+								<h4 className=""><strong>Start Year (Required)</strong></h4>
 								<input type="text" className="form-control text-center" id="startYear" onChange= {this.handleChange} required/>
 								<br />
 
-								<h4 className=""><strong>End Year</strong></h4>
+								<h4 className=""><strong>End Year (Required)</strong></h4>
 								<input type="text" className="form-control text-center" id="endYear" onChange= {this.handleChange} required/>
 								<br />
 								
-								<button type="button" className="btn btn-primary" onClick={this.handleClick}>Search</button>
+								<button type="button" className="btn btn-primary" onClick={this.handleClick}><span style={{'color': '#000'}}>Search</span></button>
 							</div>
 
 						</form>

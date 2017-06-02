@@ -4,11 +4,13 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
+var Article = require('./models/Article.js');
+
 var Promise = require("bluebird");
 
 mongoose.Promise = Promise;
 
-var Article = require('./models/Article.js');
+
 
 var app = express();
 var PORT = process.env.PORT || 8000;
@@ -42,6 +44,8 @@ db.once('open', function () {
 app.get('/', function(req, res){
   res.render("index",{});
 })
+
+
 
 app.get('/api/saved', function(req, res) {
 
@@ -84,6 +88,7 @@ app.delete('/api/saved/:id', function(req, res){
   });
 
 });
+
 
 
 

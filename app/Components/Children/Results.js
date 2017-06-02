@@ -24,7 +24,7 @@ var Results = React.createClass({
 		var that = this;
 		var myResults = nextProps.results.map(function(search, i){
 			var boundClick = that.clickToSave.bind(that, search);
-			return <div className="list-group-item" key={i}><a href={search.web_url} target="_blank">{search.headline.main}</a><br />{search.pub_date}<br /><button type="button" className="btn btn-warning" style={{'float': 'right', 'marginTop': '-39px'}} onClick={boundClick}>Save</button></div>
+			return <div className="list-group-item" key={i}><a href={search.web_url} target="_blank" style={{color: "#666", fontSize: "18px"}}>{search.headline.main}</a><br /><span style={{color: "#888"}}>{search.pub_date}</span><br /><button type="button" className="btn btn-primary" style={{'float': 'right', 'marginTop': '-39px','color': '#000'}} onClick={boundClick}>Save</button></div>
 		});
 
 		this.setState({results: myResults});
@@ -32,11 +32,17 @@ var Results = React.createClass({
 	
 	// Here we render the function
 	render: function(){
-		return(
+
+				var style = {background: "#000"};
+				var textStyle = {color: "#fff"};
+
+		return( 
+
+				
 
 			<div className="panel panel-warning">
-				<div className="panel-heading">
-					<h3 className="panel-title text-center"><strong>Results</strong></h3>
+				<div className="panel-heading" style = {style}>
+					<h3 className="panel-title text-center"><strong style = {textStyle}>Results</strong></h3>
 				</div>
 				<div className="panel-body">
 						{this.state.results}
