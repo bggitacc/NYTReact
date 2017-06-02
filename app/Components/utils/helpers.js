@@ -9,7 +9,7 @@ var helpers = {
 
 	runQuery: function(topic, startYear, endYear){
 
-		//Figure out the geolocation
+		//Query Endpoint
 		var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + nytAPI + "&q=" + topic + "&begin_date=" + startYear + "0101&end_date=" + endYear + "0101";
 
 		return axios.get(queryURL)
@@ -52,5 +52,5 @@ var helpers = {
 }
 
 
-// We export the helpers function (which contains getGithubInfo)
+// We export the helpers function
 module.exports = helpers;

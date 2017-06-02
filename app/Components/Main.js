@@ -15,7 +15,7 @@ var helpers = require('./utils/helpers.js');
 // This is the main component. 
 var Main = React.createClass({
 
-	// Here we set a generic state associated with the number of clicks
+	// Here we set a generic state associated with the fields
 	getInitialState: function(){
 		return {
 			topic: "",

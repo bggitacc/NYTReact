@@ -19,7 +19,7 @@ var Form = React.createClass({
 	// This function will respond to the user input 
 	handleChange: function(event){
 
-    	// Here we create syntax to capture any change in text to the query terms (pre-search).
+    	// Here we create syntax to capture any change in text to the query terms
     	var newState = {};
     	newState[event.target.id] = event.target.value;
     	this.setState(newState);
@@ -37,7 +37,7 @@ var Form = React.createClass({
 	// Here we render the function
 	render: function(){
 
-		var inlineStyle {backGround: "#fed136"}
+
 
 		return(
 
