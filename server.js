@@ -28,7 +28,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //mongoose.connect('mongodb://localhost/nytreact');
-mongoose.connect('mongodb://me:password@ds161001.mlab.com:61001/nytreact');
+mongoose.connect('mongodb://<your>:<password>@ds161001.mlab.com:61001/nytreact');
 
 
 var db = mongoose.connection;
